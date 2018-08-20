@@ -26,7 +26,7 @@
     <ClCompile Include="baekjoon.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1020.cpp">
+    <ClCompile Include="숫자 정사각형%281051%29.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
