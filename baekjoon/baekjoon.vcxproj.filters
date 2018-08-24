@@ -32,6 +32,9 @@
     <ClCompile Include="미로탐색(2178).cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="연구실(14502).cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
