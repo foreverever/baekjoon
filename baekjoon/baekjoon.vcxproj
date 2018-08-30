@@ -155,6 +155,7 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="단어공부%281157%29.cpp" />
     <ClCompile Include="미로탐색(2178).cpp" />
     <ClCompile Include="숫자 정사각형%281051%29.cpp" />
     <ClCompile Include="baekjoon.cpp" />
