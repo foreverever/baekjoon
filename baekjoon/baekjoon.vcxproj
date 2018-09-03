@@ -165,6 +165,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="알파벳(1987).cpp" />
     <ClCompile Include="연구실(14502).cpp" />
   </ItemGroup>
   <ItemGroup>
