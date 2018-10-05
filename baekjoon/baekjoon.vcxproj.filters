@@ -50,6 +50,9 @@
     <ClCompile Include="퇴사(14501).cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="단지번호붙이기(2667).cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />

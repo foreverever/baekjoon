@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -156,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="단어공부%281157%29.cpp" />
+    <ClCompile Include="단지번호붙이기(2667).cpp" />
     <ClCompile Include="덩치(7568).cpp" />
     <ClCompile Include="도영이가 만든 맛있는 음식(2961).cpp" />
     <ClCompile Include="미로탐색(2178).cpp" />
