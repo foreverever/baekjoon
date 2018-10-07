@@ -56,6 +56,9 @@
     <ClCompile Include="로또(6603).cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="토마토(7576).cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />

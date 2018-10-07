@@ -171,6 +171,7 @@
     </ClCompile>
     <ClCompile Include="알파벳(1987).cpp" />
     <ClCompile Include="연구실(14502).cpp" />
+    <ClCompile Include="토마토(7576).cpp" />
     <ClCompile Include="퇴사(14501).cpp" />
   </ItemGroup>
   <ItemGroup>
