@@ -161,6 +161,7 @@
     <ClCompile Include="도영이가 만든 맛있는 음식(2961).cpp" />
     <ClCompile Include="로또(6603).cpp" />
     <ClCompile Include="미로탐색(2178).cpp" />
+    <ClCompile Include="숫자 만들기 (삼성 모의 SW 역량테스트_4008).cpp" />
     <ClCompile Include="숫자 정사각형%281051%29.cpp" />
     <ClCompile Include="baekjoon.cpp" />
     <ClCompile Include="pch.cpp">
