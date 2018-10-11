@@ -62,6 +62,9 @@
     <ClCompile Include="숫자 만들기 (삼성 모의 SW 역량테스트_4008).cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="삼성_활주로 건설%284014%29.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
