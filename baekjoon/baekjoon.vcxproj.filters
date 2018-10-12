@@ -41,9 +41,6 @@
     <ClCompile Include="알파벳(1987).cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="도영이가 만든 맛있는 음식(2961).cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="덩치(7568).cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -63,6 +60,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="삼성_활주로 건설%284014%29.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="삼성_수영장(1952).cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="도영이가 만든 맛있는 음식(2961).cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
