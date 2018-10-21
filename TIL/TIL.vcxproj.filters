@@ -13,5 +13,8 @@
     <None Include="2018-09-03(알파벳_1987).md">
       <Filter>소스 파일</Filter>
     </None>
+    <None Include="2018-10-21(삼성 sw테스트 2번).md">
+      <Filter>소스 파일</Filter>
+    </None>
   </ItemGroup>
 </Project>
