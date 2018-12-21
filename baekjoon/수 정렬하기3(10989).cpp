@@ -23,7 +23,7 @@ int main() {
 	return 0;
 }
 
-///////////////////////////////////메모리 초과 why??////////////////////////////////
+/////////////////////////////////메모리 초과 why??////////////////////////////////
 //#include <iostream>
 //#include <map>
 //using namespace std;
@@ -37,10 +37,11 @@ int main() {
 //		cin >> input;
 //		m[input]++;
 //	}
-//	for (int i = 1; i <= N; i++) {
-//		while (m[i] > 0) {
-//			cout << i << '\n';
-//			m[i]--;
+//	map<int, int>::iterator iter;
+//	for (iter = m.begin(); iter != m.end(); iter++) {
+//		while (iter->second>0) {
+//			cout << iter->first << '\n';
+//			iter->second--;
 //		}
 //	}
 //	return 0;
