@@ -8,16 +8,16 @@ string str;
 void findAns() {
 	char beforeValue = ' ';
 	map <char, bool> m;
-	bool isGropWord = true;
+	bool isGroupWord = true;
 	for (int i = 0; i < str.size(); i++) {
 		if (beforeValue == str[i]) continue;
 		if (m[str[i]]) {
-			isGropWord = false;
+			isGroupWord = false;
 		}
 		beforeValue = str[i];
 		m[str[i]] = true;
 	}
-	if (isGropWord) ans++;
+	if (isGroupWord) ans++;
 }
 
 int main() {
