@@ -10,6 +10,7 @@ int main() {
 		if (s < 'D') {
 			cout << char('Z' - ('C'-s));
 		}
+
 		else {
 			cout << char(s - 3);
 		}
