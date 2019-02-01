@@ -70,5 +70,6 @@ int main() {
 	for (int var : b) {
 		cout << var;
 	}
+
 	return 0;
 }
