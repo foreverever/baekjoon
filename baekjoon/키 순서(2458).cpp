@@ -10,7 +10,6 @@ int n, m, total;	//학생수, 비교횟수, 나보다 키가 크거나 작은 �
 bool visit[501];
 
 void dfs(int i, int height) {
-	for(int j : arr[i])
 	for (int j = 1; j <= n; j++) {
 		if (arr[i][j] == height && visit[j] == false) {
 			visit[j] = true;
