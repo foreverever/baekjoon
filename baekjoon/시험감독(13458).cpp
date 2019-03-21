@@ -24,9 +24,11 @@ void findAns() {
 
 int main() {
 	scanf("%d", &N);
+
 	for (int i = 0; i < N; i++) {
 		scanf("%d", &arr[i]);
 	}
+
 	scanf("%d %d", &B, &C);
 	findAns();
 	printf("%lld", ans);
