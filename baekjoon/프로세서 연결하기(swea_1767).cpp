@@ -1,7 +1,5 @@
 #include <iostream>
-#include <vector>
 #include <queue>
-#include <memory.h>
 using namespace std;
 
 struct Cell {
@@ -15,33 +13,34 @@ struct Cell {
 };
 
 int tc, N, cellSize, cnt, mx=-2e9, ans = 2e9;
-int arr[13][13];
+int arr[12][12];
 int dy[4] = { -1,1,0,0 };
 int dx[4] = { 0,0,-1,1 };
 Cell cells[12];
 
-void dfs(int idx) {
+int install(int ny, int nx, int idx, int k, int val) {
+	int c = 0;
+	while (1) {
+		if (ny == 0 || nx == 0 || ny == N - 1 || nx == N - 1) break;
+		ny += dy[k];
+		nx += dx[k];
+		arr[ny][nx] = val;
+		c++;
+	}
+	cnt++;
+	return c;
+}
+
+void dfs(int idx, int sum) {
 	if (idx == cellSize) {
 		//최대 프로세서 개수 세기
 		if (mx < cnt) {
 			mx = cnt;
 			ans = 2e9;
-			int sum = 0;
-			for (int i = 0; i < N; i++) {
-				for (int j = 0; j < N; j++) {
-					if (arr[i][j] == -1) sum++;
-				}
-			}
 			ans = ans > sum ? sum : ans;
 			return;
 		}
 		else if (mx == cnt) {
-			int sum = 0;
-			for (int i = 0; i < N; i++) {
-				for (int j = 0; j < N; j++) {
-					if (arr[i][j] == -1) sum++;
-				}
-			}
 			ans = ans > sum ? sum : ans;
 			return;
 		}
@@ -49,9 +48,7 @@ void dfs(int idx) {
 	}
 
 	int backupCnt = 0;
-	int backup[13][13];
 	backupCnt = cnt;
-	memcpy(backup, arr, sizeof(arr));
 
 	for (int k = 0; k < 4; k++) {
 		int ny = cells[idx].y;
@@ -69,18 +66,10 @@ void dfs(int idx) {
 		}
 		//연결가능 하면 전선 설치
 		if (isPossible) {
-			ny = cells[idx].y;
-			nx = cells[idx].x;
-			while (1) {
-				if (ny == 0 || nx == 0 || ny == N - 1 || nx == N - 1) break;
-				ny += dy[k];
-				nx += dx[k];
-				arr[ny][nx] = -1;
-			}
-			cnt++;
+			dfs(idx + 1, sum + install(cells[idx].y, cells[idx].x, idx, k, -1));
+			install(cells[idx].y, cells[idx].x, idx, k, 0);
 		}
-		dfs(idx + 1);
-		memcpy(arr, backup, sizeof(arr));
+		else dfs(idx + 1, sum);
 		cnt = backupCnt;
 	}
 }
@@ -99,7 +88,7 @@ int main() {
 				}
 			}
 		}
-		dfs(0);
+		dfs(0,0);
 		printf("#%d %d\n", t, ans);
 		cellSize = 0;
 		ans = 2e9;
