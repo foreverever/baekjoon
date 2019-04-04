@@ -10,7 +10,7 @@ int dx[4] = { 0,0,-1,1 };
 
 void dfs(int y, int x, int cnt, int sum) {
 	if (cnt == 4) {
-		//max°ª ºñ±³
+		//maxê°’ ì°¾ê¸°
 		ans = ans < sum ? sum : ans;
 		return;
 	}
@@ -28,22 +28,22 @@ void dfs(int y, int x, int cnt, int sum) {
 
 void findRemainder(int y, int x) {
 	int sum = 0;
-	//¤Ç
+	//ã…—
 	if (y - 1 >= 0 && x + 2 < M) {
 		sum = arr[y][x] + arr[y][x + 1] + arr[y][x + 2] + arr[y - 1][x + 1];
 		ans = ans < sum ? sum : ans;
 	}
-	//¤¿
+	//ã…
 	if (y + 2 < N && x + 1 < M) {
 		sum = arr[y][x] + arr[y + 1][x] + arr[y + 2][x] + arr[y + 1][x + 1];
 		ans = ans < sum ? sum : ans;
 	}
-	//¤Ì
+	//ã…œ
 	if (y + 1 < N && x + 2 < M) {
 		sum = arr[y][x] + arr[y][x + 1] + arr[y][x + 2] + arr[y + 1][x + 1];
 		ans = ans < sum ? sum : ans;
 	}
-	//¤Ã
+	//ã…“
 	if (y + 2 < N && x - 1 >= 0) {
 		sum = arr[y][x] + arr[y + 1][x] + arr[y + 2][x] + arr[y + 1][x - 1];
 		ans = ans < sum ? sum : ans;
@@ -62,7 +62,7 @@ int main() {
 			visit[i][j] = true;
 			dfs(i, j, 1, arr[i][j]);
 			visit[i][j] = false;
-			findRemainder(i, j);	//¤Ç¸ð¾ç Å½»ö
+			findRemainder(i, j);	//ã…—ëª¨ì–‘ 
 		}
 	}
 	printf("%d", ans);
