@@ -12,7 +12,7 @@ struct Pos {
 	Pos() {}
 };
 
-int N, M, poseSize, ans = -2e9, wall;
+int N, M, poseSize, ans = -2e9, virus;
 int arr[9][9], visit[9][9];
 int dy[4] = { -1,1,0,0 };
 int dx[4] = { 0,0,-1,1 };
@@ -35,9 +35,9 @@ void bfs(Pos p) {
 			if (ny < 0 || nx < 0 || ny >= N || nx >= M) continue;
 			if (arr[ny][nx] == 0 && visit[ny][nx] == false) {
 				visit[ny][nx] = true;
-				wall++;
+				virus++;
 				q.push(Pos(ny, nx));
-				if (poseSize - wall < ans) return;	//이전 ans의 wall 개수보다 크면, 더 이상 탐색이 필요 없다.
+				if (poseSize - virus < ans) return;	//이전 ans의 wall 개수보다 크면, 더 이상 탐색이 필요 없다.
 			}
 		}
 	}
@@ -46,7 +46,7 @@ void bfs(Pos p) {
 void dfs(int cnt, int idx) {
 	if (cnt == 3) {
 		//bfs시작
-		wall = 3;
+		virus = 3;
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < M; j++) {
 				if (arr[i][j] == 2 && visit[i][j] == false) {
@@ -55,7 +55,7 @@ void dfs(int cnt, int idx) {
 			}
 		}
 		//ans 최대값 비교
-		int diff = poseSize - wall;
+		int diff = poseSize - virus;
 		ans = ans < diff ? diff : ans;
 
 		//q 비움
