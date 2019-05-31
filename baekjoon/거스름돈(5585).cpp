@@ -1,37 +1,27 @@
 #include <iostream>
+#include <vector>
 #define PAY 1000
 using namespace std;
 
-int n;
+int n, ans;
+vector<int> v = { 500,100,50,10,5,1 };
+
+int calc(int change, int coin) {
+	int cnt = change / coin;
+	ans += cnt;
+	return change - (cnt*coin);
+}
 
 int findAns(int change) {
-	int cnt = 0;
-	if (change > 500) {
-		change -= 500;
-		cnt++;
+	for (int val : v) {
+		change = calc(change, val);
 	}
-	while (change >= 100) {
-		change -= 100;
-		cnt++;
-	}
-	while (change >= 50) {
-		change -= 50;
-		cnt++;
-	}
-	while (change >= 10) {
-		change -= 10;
-		cnt++;
-	}
-	while (change >= 5) {
-		change -= 5;
-		cnt++;
-	}
-	if (change >= 1) cnt += change;
-	return cnt;
+	return ans;
 }
 
 int main() {
 	cin >> n;
-	cout << findAns(PAY - n);
+	findAns(PAY - n);
+	cout << ans;
 	return 0;
 }
