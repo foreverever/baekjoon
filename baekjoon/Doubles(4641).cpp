@@ -31,7 +31,6 @@ void findAns() {
 		memset(isExist, false, sizeof(isExist));
 	}
 }
-
 int main() {
 	findAns();
 	return 0;
